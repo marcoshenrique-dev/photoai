@@ -1,3 +1,4 @@
+// tailwind.config.js
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -8,10 +9,26 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#174589",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      animation: {
+        shine: "shine 2s linear infinite",
+      },
+      keyframes: {
+        shine: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
+          },
+        },
       },
     },
   },
