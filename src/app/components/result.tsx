@@ -11,7 +11,7 @@ export function Result({ results }: IProps) {
       <h1 className="font-bold text-white">Results</h1>
       <div className="border-dashed border-gray-500 border-2 backdrop-blur-lg bg-slate-900 opacity-80 p-16 flex items-center flex-col rounded-md">
         {results.map((item) => (
-          <div className="mb-6">
+          <div key={item.label} className="mb-6">
             <p className="font-medium text-white mb-4">{item.label}</p>
             <div className="flex flex-row gap-2 items-center justify-center">
               <progress
